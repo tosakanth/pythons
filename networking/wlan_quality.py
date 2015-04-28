@@ -2,8 +2,8 @@ import subprocess
 import time
 import argparse
 
-parser = argpars.ArgumentParser(description="Check for WLAN Strength.")
-parser.add_argument(dest="interfce",nargs="?", default="wlan0", help="wlan_strength <interface> (default=wlan0)")
+parser = argpars.ArgumentParser(description="Check for WLAN Link Quality.")
+parser.add_argument(dest="interfce",nargs="?", default="wlan0", help="wlan_quality <interface> (default=wlan0)")
 args = parser.parse_args()
 
 print "Ctrl-C to quit."
