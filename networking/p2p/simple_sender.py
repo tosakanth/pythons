@@ -1,3 +1,8 @@
+'''
+This is simple sender using socket.
+You change UDP_IP to any IP4 addresses locating in the same LAN of your own.
+'''
+
 import socket
 
 UDP_IP = "127.0.0.1"
