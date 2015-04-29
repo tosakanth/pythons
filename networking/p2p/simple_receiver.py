@@ -1,3 +1,8 @@
+'''
+Demonstration of simple receiver using socket.
+This receiver will be waiting to the message coming out
+from the simple_sender.py
+'''
 import socket
 
 UDP_IP = "127.0.0.1"
