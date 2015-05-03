@@ -9,7 +9,7 @@ def diffImg(t0, t1, t2):
   # I get 2 differences then calculate difference between them again
   d3 = cv2.absdiff(d1,d2)
   
-  #I can not find the reason why cv2.mean() returns a tuple with 4 values, I want only the first element.
+  #I can not find the reason why cv2.mean() returns a tuple with 4 values, I just want only the first.
   #if there is not a movement (or very little movement) the mean value of result array should be low,
   avg = cv2.mean(d3)
   
