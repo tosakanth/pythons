@@ -1,7 +1,7 @@
 import cv2
 
 def diffImg(t0, t1, t2):
-  # I chose t0 to be a base frame then I am going to calculate difference of the rest 2 frames
+  # I choose t0 to be a base frame then I am going to calculate difference of the rest 2 frames
   # from the base frame.
   # To calculate difference between t1 and t0, then between t2 and t0	
   d1 = cv2.absdiff(t2, t1)
