@@ -1,17 +1,16 @@
 import cv2
 
 def diffImg(t0, t1, t2):
-  # I choose t0 to be a base frame then I am going to calculate difference of the rest 2 frames
-  # from the base frame.
-  # To calculate difference between t1 and t0, then between t2 and t0	
+  
+  # To calculate difference between frames (t1 vs t0, then t2 vs t1)
   d1 = cv2.absdiff(t2, t1)
   d2 = cv2.absdiff(t1, t0)
   
   # I get 2 differences then calculate difference between them again
   d3 = cv2.absdiff(d1,d2)
   
-  #if there is not a movement (or very little movement) the result value should be low,
-  #on the other hand it should be high.
+  #if there is not a movement (or very little movement) the mean value of result array should be low,
+  
   return cv2.mean(d3)
 
 #initiate camera, I use camera index : 0
