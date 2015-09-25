@@ -16,7 +16,9 @@ class YahooWheater(object):
 				
 	def parse_Xml(self,xml_data):
 		dom = parseString(xml_data)
-		res = dom.getElementsByTagName('result')
+		res = dom.getElementsByTagName('results')
+		if len(res[0].childNodes) <  1 :
+			return
 		if len(res) == 0:
 			return
 		#get today 
