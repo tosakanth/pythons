@@ -16,6 +16,9 @@ class YahooWheater(object):
 				
 	def parse_Xml(self,xml_data):
 		dom = parseString(xml_data)
+		res = dom.getElementsByTagName('result')
+		if len(res) == 0:
+			return
 		#get today 
 		for node in dom.getElementsByTagName('yweather:condition'):
 			self.today={"temp":node.attributes['temp'].value,
